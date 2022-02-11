@@ -1,0 +1,2 @@
+keypad.c:6:6:resetAllPinsB	8	static
+keypad.c:14:5:readKeypad	32	static

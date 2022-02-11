@@ -1,0 +1,8 @@
+lcd_v1.2.c:12:6:lcd_escreve_dado	16	static
+lcd_v1.2.c:41:6:lcd_escreve_instrucao	16	static
+lcd_v1.2.c:69:6:lcd_posicao_do_cursor	0	static
+lcd_v1.2.c:110:6:lcd_escreve_instrucao_Init	16	static
+lcd_v1.2.c:86:6:lcd_20x4_4bits_Init	8	static
+lcd_v1.2.c:125:6:lcd_limpa_linha	8	static
+lcd_v1.2.c:142:6:lcd_limpa_display	0	static
+lcd_v1.2.c:147:6:lcd_escreve_string	8	static
