@@ -224,12 +224,17 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : FEEDER_EMPTY_Pin FEEDER_ON_Pin PB3 PB4
-                           PB5 PB6 */
-  GPIO_InitStruct.Pin = FEEDER_EMPTY_Pin|FEEDER_ON_Pin|GPIO_PIN_3|GPIO_PIN_4
-                          |GPIO_PIN_5|GPIO_PIN_6;
+  /*Configure GPIO pins : FEEDER_EMPTY_Pin FEEDER_ON_Pin */
+  GPIO_InitStruct.Pin = FEEDER_EMPTY_Pin|FEEDER_ON_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB3 PB4 PB5 PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
