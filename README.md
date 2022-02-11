@@ -24,9 +24,26 @@ Como objetivo principal, temos o de conciliar a rotina do pet com a do seu tutor
 - Display LCD 20x4
 
 ## Diagrama de funcionamento
+<p align="center">
+  <img src="https://github.com/Daviqalb07/SmartFeeder/blob/master/Schematics/Diagrama-de-funcionamento.png" width="70%" />
+</p>
 
 ## Adversidades
 Devido à pandemia de covid-19, o projeto teve que ser realizado remotamente, através de simulador, o qual requisitava muito dos recursos do computador, limitando o tempo de testes de funcionamento e ocasionando alguns erros temporários. Além disso, não foi possível simular uma balança real nesse formato.
+
+## Schematics
+- Tela inicial
+<p float="left">
+  <img src="https://github.com/Daviqalb07/SmartFeeder/blob/master/Schematics/Esquematico-tela-inicial.jpg" width="500" />
+</p>
+- Home
+<p float="left">
+  <img src="https://github.com/Daviqalb07/SmartFeeder/blob/master/Schematics/Esquematico-tela-ativa.jpg" width="500"/> 
+</p>
+- Configuração dos pinos
+<p float="left">
+  <img src="https://github.com/Daviqalb07/SmartFeeder/blob/master/Schematics/Configuracoes-dos-pinos.png" width="500"/> 
+</p>
 
 ## Referências
 [Biblioteca para comunicação de display LCD com STM32](https://github.com/delpitec/C_STM32_LibLiquidCrystal) (Adaptada durante o projeto).
