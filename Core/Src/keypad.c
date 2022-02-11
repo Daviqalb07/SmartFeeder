@@ -6,6 +6,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define ENTER 10
+#define NULO 11
+/* resetAllPinsB
+ * Armazena o valor 0 (RESET) nos pinos de saída da porta B.
+ *
+ * @param: void
+ * @return: void
+ * */
 void resetAllPinsB(){
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_RESET);
@@ -13,7 +21,12 @@ void resetAllPinsB(){
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
 }
 
-
+/* readKeypad
+ * Realiza a técnica de varredura do teclado matricial
+ *
+ * @param: void
+ * @return: int - resultado da leitura do teclado
+ * */
 int readKeypad(){
 	uint16_t columns[] = {GPIO_PIN_0, GPIO_PIN_1, GPIO_PIN_2};
 	uint16_t rows[] = {GPIO_PIN_3, GPIO_PIN_4, GPIO_PIN_5, GPIO_PIN_6};
@@ -48,13 +61,18 @@ int readKeypad(){
 			else if(i == 2)
 				return 9;
 			else if(i == 3)
-				return 10; // Apertou "ENTER"
+				return ENTER;
 		}
 
 	}
-	return 11; // definido para indicar que não foi pressionado nada
+	return NULO;
 }
-
+/* getTimeFromKeypad
+ * Realiza a leitura do tempo do timer e o disponibiliza no display LCD
+ *
+ * @param: display LCD.
+ * @return uint32_t - tempo do timer, em segundos.
+ * */
 uint32_t getTimeFromKeypad(LiquidCrystal* lcd){
 	uint32_t time = 0;
 	int minutos, segundos, key;
@@ -69,9 +87,9 @@ uint32_t getTimeFromKeypad(LiquidCrystal* lcd){
 		setCursor(lcd, 0, 3);
 		print(lcd, timeDisplay);
 
-		if(key == 10)
+		if(key == ENTER)
 			break;
-		if(key < 10){
+		if(key < ENTER){
 			time = time*10 + (uint32_t)key;
 			HAL_Delay(220); // Evita contar a leitura repetidas vezes
 		}

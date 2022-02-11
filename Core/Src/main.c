@@ -97,6 +97,7 @@ int main(void)
   MX_GPIO_Init();
 
   /* USER CODE BEGIN 2 */
+  // Inicia o display
   LiquidCrystal lcd;
   begin(&lcd, 20, 4, LCD_5x8DOTS);
   home(&lcd);
@@ -104,11 +105,12 @@ int main(void)
   setCursor(&lcd, 0, 1);
   print(&lcd, "SmartFeeder!");
 
-  int quantity = 130;
+  int quantity = 130; // default necessário já que não há a balanca no simulador.
 
   feederInit(&feeder, quantity, FEEDER_ON_GPIO_Port, FEEDER_ON_Pin, FEEDER_EMPTY_GPIO_Port, FEEDER_EMPTY_Pin);
-  isFeederOn = false;
+  isFeederOn = false; // Sistema não está ativo por padrão
 
+  // Lê o tempo do timer
   setCursor(&lcd, 0, 2);
   print(&lcd, "Configure o timer:");
   time = getTimeFromKeypad(&lcd);

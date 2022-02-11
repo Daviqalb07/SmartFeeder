@@ -1,4 +1,4 @@
-feeder.c:29:5:getQuantity	0	static
-feeder.c:33:6:isFeederEmpty	8	static
-feeder.c:14:6:feederInit	24	static
-feeder.c:44:6:feederOn	16	static
+feeder.c:48:5:getQuantity	0	static
+feeder.c:59:6:isFeederEmpty	8	static
+feeder.c:23:6:feederInit	24	static
+feeder.c:76:6:feederOn	16	static
