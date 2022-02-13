@@ -1,7 +1,7 @@
 # SmartFeeder
 **Um sistema eficiente para evitar que o seu pet não se alimente por longos períodos!**
 
-Link do vídeo:
+Link do vídeo: https://www.youtube.com/watch?v=qIbuHFhNTBY
 
 ## Equipe:
 - **Catherine Bezerra Markert**
